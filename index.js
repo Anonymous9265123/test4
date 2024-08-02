@@ -6,13 +6,9 @@ const cors = require("cors");
 
 const app = express();
 const PORT = 3000;
-const IP = "0.0.0.0";
 
 const MONGO_URI = process.env.MONGODB_URI;
 
-app.listen(PORT, IP, () => {
-  console.log(`Server running on http://${IP}:${PORT}`);
-});
 app.use(cors());
 app.use(express.json());
 
